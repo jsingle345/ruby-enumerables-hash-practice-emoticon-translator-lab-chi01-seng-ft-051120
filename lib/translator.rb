@@ -47,7 +47,6 @@ def get_english_meaning(file_path, emoticons)
       end
     end 
   end 
-    binding.pry
   english_emoticons
   if english_emoticons != new_hash
   sorry_message
