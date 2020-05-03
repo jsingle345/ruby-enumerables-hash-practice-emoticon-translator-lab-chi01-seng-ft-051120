@@ -43,7 +43,7 @@ def get_english_meaning(file_path, emoticons)
     binding.pry
     value.map do |key, value|
       if l_library[value][key][:english]
-        english_emoticons << l_library[value][key][:english]
+        english_emoticons << l_library[value]
       end
       
       if !l_library[value][key][value][:english]
