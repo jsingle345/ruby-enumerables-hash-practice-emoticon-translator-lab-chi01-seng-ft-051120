@@ -40,8 +40,8 @@ def get_english_meaning(file_path, emoticons)
   english_emoticons = {}
   
   l_library.map do |new_hash, value|
-    binding.pry
     value.map do |key, value|
+      binding.pry
       if l_library[value][key][:english]
         english_emoticons << l_library[value]
       end
