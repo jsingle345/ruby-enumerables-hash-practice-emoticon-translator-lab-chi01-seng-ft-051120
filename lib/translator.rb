@@ -22,7 +22,8 @@ def get_japanese_emoticon(file_path, emoticons)
   japanese_emoticons = " "
   
   l_library.map do |new_hash, value|
-    if emoticon == value[:english]
+    if emoticons == value[:english]
+
       binding.pry
     end
   end 
