@@ -16,27 +16,40 @@ def load_library(file_path)
  new_hash
 end
 
-def get_japanese_emoticon(load_library, emoticons)
+# def get_japanese_emoticon(file_path, emoticons)
+#    l_library = load_library(file_path)
+#   japanese_emoticons = {}
+  
+# load_library.map do |new_hash, value|
+#     new_hash.map do |key, value|
+#       if load_library[new_hash][key][:japanese]
+#         english_emoticons << load_library[new_hash][key][:japanese]
+#       end
+#       if !load_library[new_hash][key][value][:japanese]
+#         puts sorry_message
+#       end
+#     end 
+#   end 
+#   japanese_emoticons
+# end
   
   
-  # code goes here
-end
-
-def get_english_meaning(load_library, emoticons)
+  
+def get_english_meaning(file_path, emoticons)
+  l_library = load_library(file_path)
   english_emoticons = {}
-binding.pry
-   load_library.map do |emoticons, value|
-     emoticons.map do |new_hash, value|
-       new_hash.map do |key, value|
-         if load_library[emoticons][new_hash][key][:english]
-           english_emoticons << load_library[emoticons][new_hash][key][:english]
-         end
-         if !load_library[emoticons][new_hash][key][value][:english]
-           puts sorry_message
-         end
-       end
-     end 
-   end 
-   english_emoticons
-
+  
+  l_library.map do |new_hash, value|
+    binding.pry
+    value.map do |key, value|
+      if l_library[value][key][:english]
+        english_emoticons << l_library[value][key][:english]
+      end
+      
+      if !l_library[value][key][value][:english]
+        puts sorry_message
+      end
+    end 
+  end 
+  english_emoticons
 end
