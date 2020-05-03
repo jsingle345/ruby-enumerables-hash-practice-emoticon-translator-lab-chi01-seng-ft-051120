@@ -20,7 +20,6 @@ def get_japanese_emoticon(file_path, emoticons)
  sorry_message = "Sorry, that emoticon was not found"
   l_library = load_library(file_path)
   japanese_emoticons = " "
-  
   l_library.map do |new_hash, value|
     value.map do |key, value2|
       if value2 == emoticons
@@ -30,6 +29,7 @@ def get_japanese_emoticon(file_path, emoticons)
     if japanese_emoticons == " "
         japanese_emoticons = sorry_message
       end
+      binding.pry
   end 
   japanese_emoticons
 end
