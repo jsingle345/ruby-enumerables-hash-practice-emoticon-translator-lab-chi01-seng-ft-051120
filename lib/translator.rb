@@ -50,6 +50,6 @@ def get_english_meaning(file_path, emoticons)
       end
     end 
   end 
-  binding.pry
+  #binding.pry
   english_emoticons
 end
