@@ -16,22 +16,24 @@ def load_library(file_path)
  new_hash
 end
 
-# def get_japanese_emoticon(file_path, emoticons)
-#    l_library = load_library(file_path)
-#   japanese_emoticons = {}
+def get_japanese_emoticon(file_path, emoticons)
+ sorry_message = "Sorry, that emoticon was not found"
+  l_library = load_library(file_path)
+  japanese_emoticons = " "
   
-# load_library.map do |new_hash, value|
-#     new_hash.map do |key, value|
-#       if load_library[new_hash][key][:japanese]
-#         english_emoticons << load_library[new_hash][key][:japanese]
-#       end
-#       if !load_library[new_hash][key][value][:japanese]
-#         puts sorry_message
-#       end
-#     end 
-#   end 
-#   japanese_emoticons
-# end
+  l_library.map do |new_hash, value|
+    value.map do |key, value2|
+      if value2 == emoticons
+        japanese_emoticons = new_hash
+      end
+  
+    end 
+    if japanese_emoticons == " "
+        japanese_emoticons = sorry_message
+      end
+  end 
+  japanese_emoticons
+end
   
   
   
