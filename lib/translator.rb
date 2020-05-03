@@ -37,14 +37,14 @@ end
   
 def get_english_meaning(file_path, emoticons)
   l_library = load_library(file_path)
-  english_emoticons = {}
+  english_emoticons = " "
   
   l_library.map do |new_hash, value|
     value.map do |key, value2|
       binding.pry
-      # if value2 == emoticons
-      #   return new_hash
-      # end
+      if value2 == emoticons
+        english_emoticons = new_hash
+      end
       
       #if value2 == [:english]
         #puts sorry_message
