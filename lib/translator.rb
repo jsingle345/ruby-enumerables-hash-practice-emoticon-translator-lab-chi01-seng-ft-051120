@@ -26,7 +26,6 @@ def get_japanese_emoticon(file_path, emoticons)
       if value2 == emoticons
         japanese_emoticons = new_hash
       end
-  binding.pry
     end 
     if japanese_emoticons == " "
         japanese_emoticons = sorry_message
