@@ -46,8 +46,8 @@ def get_english_meaning(file_path, emoticons)
         english_emoticons = new_hash
       end
       
-      if value2 != emoticons
-        english_emoticons = sorry_message
+      # if value2 != emoticons
+      #   english_emoticons = sorry_message
       end
     end 
   end 
