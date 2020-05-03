@@ -50,7 +50,6 @@ def get_english_meaning(file_path, emoticons)
       #   english_emoticons = sorry_message
       #end
     end 
-    
   end 
   english_emoticons
 end
