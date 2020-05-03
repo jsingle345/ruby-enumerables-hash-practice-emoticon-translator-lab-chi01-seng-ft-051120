@@ -42,15 +42,13 @@ def get_english_meaning(file_path, emoticons)
   
   l_library.map do |new_hash, value|
     value.map do |key, value2|
-      binding.pry
       if value2 == emoticons
         english_emoticons = new_hash
       end
-      
-      if value2 != emoticons
-        english_emoticons = sorry_message
-      end
     end 
   end 
+  if value2 != emoticons
+    binding.pry
+        english_emoticons = sorry_message
   english_emoticons
 end
