@@ -49,7 +49,7 @@ def get_english_meaning(file_path, emoticons)
       #   english_emoticons = sorry_message
       #end
     end 
-    if english_emoticons != emoticons
+    if english_emoticons == " "
         english_emoticons = sorry_message
       end
   end 
